@@ -5,18 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>OhMyFood</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
-        <script
+    <script
       src="https://kit.fontawesome.com/7e456ca01a.js"
       crossorigin="anonymous"
     ></script>
-    </head>
+  </head>
 
-    <body> <div class="loader"></div><header class="header">
+  <body>
+    <header class="header">
+      <!-- image du logo -->
+      <div class="header__logo">
+           <img class="header__logo__ohmyfood pic_fit" src="images/logo/ohmyfood.png" alt="logo Ohmyfood">
+      </div>
+  </header>
 
-    </header>
-    <main></main>
-    </body>
+  <main>
+       <!-- spinner -->
+      <div id="loader-wrapper" class="displayfade">
+          <div id="loader"></div>
+      </div>
+      <!-- la ville à saisir -->
+      <div class="localisation">
+        <h2 class="loca">Localisation</h2>
+
+        <div class="localisation__ville">
+            <div class="localisation__ville__PositionVille">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <input type="text" class="localisation__ville__VilleChoisie" name="VilleChoisie" placeholder="Paris, Belleville">
+        </div>
+        
+      </div>
+      
+      </main>
+  </body>
 </html>
