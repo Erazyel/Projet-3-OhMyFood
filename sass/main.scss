@@ -1,9 +1,9 @@
 @import "./utils/variables";
 @import "./utils/keyframes";
-@import "./utils/mixins";
 @import "./base/base";
-@import "./layout/container";
+@import "./pages/home.scss";
 @import "./pages/menu";
 @import "./layout/header";
 @import "./layout/footer";
-
+@import "./utils/animations";
+@import "./components/buttons";

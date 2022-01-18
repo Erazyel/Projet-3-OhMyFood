@@ -1,80 +1,44 @@
-@charset "UTF-8";
-/* animation loading spinner*/
-@keyframes spin {
+@keyframes appear {
   0% {
-    visibility: visible;
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 1;
-  }
-  90% {
-    transform: translate(-50%, -50%) rotate(340deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-    opacity: 0;
-  }
-}
-/* apparition du full container après le loading*/
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  90% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
-/* appartition progressive du remplissage du coeur*/
-@keyframes progress-bar {
+/* Animation tournante coche menus */
+@keyframes coche {
   0% {
-    opacity: 0;
-    transform: translateY(15%);
+    transform: rotate(180deg);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* animation apparition progressive des plats*/
-@keyframes slidein {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(50%);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-/* animation click choix menu en vert */
-@keyframes check {
-  0% {
-    right: -99px;
-  }
-  100% {
-    right: -1px;
-    width: 20%;
-  }
-}
-@keyframes rotate {
-  0% {
     transform: rotate(0deg);
   }
+}
+/* Animation loading spinner */
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
+    opacity: 0;
   }
 }
-/*modification ombre bouton commander*/
-@keyframes ombre {
-  from {
-    box-shadow: 10px 10px rgba(180, 74, 209, 0.158);
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 /*body*/
@@ -88,6 +52,491 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.localisation i {
+  padding-right: 0.5rem;
+}
+
+.reservation {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.reservation__subtitle {
+  margin-bottom: 2rem;
+}
+
+.reservation__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.reservation__btn:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.fonctionnement {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.fonctionnement__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: compteListe;
+}
+
+.list__step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+  transition: 1s;
+}
+.list__step:hover {
+  background-color: #f5edff;
+  cursor: pointer;
+}
+.list__step:before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -0.75rem;
+}
+.list__stepi {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+
+.card {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+}
+
+a.card {
+  display: block;
+}
+
+.card__img {
+  height: 8rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  display: block;
+}
+
+.card__new {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.2rem;
+}
+
+.card__back {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+
+.menu__img {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.tuto__icon {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    display: grid;
+    justify-items: stretch;
+    align-items: end;
+    justify-content: space-evenly;
+    align-content: stretch;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__img {
+    height: 12rem;
+  }
+
+  .fonctionnement__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    counter-reset: compteListe;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .list__step {
+    align-items: center;
+  }
+}
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.menu__restaurant {
+  padding: 1rem 2rem 0 1rem;
+  margin-top: -5rem;
+  border-radius: 2rem 2rem 0 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+.menu__bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__title {
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  font-family: Shrikhand, "cursive";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__subtitle::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 2rem;
+}
+
+.menu__card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu__card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  animation: appear ease-in 0.5s;
+  animation-fill-mode: both;
+}
+
+.menu__price {
+  font-weight: 700;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.menu__animation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.menu__animation__icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  /*transform: rotate(180deg);
+  transition-duration: 0.5s;*/
+  color: #99e2d0;
+}
+
+.menu__card:hover .menu__animation__icon {
+  /*transform: rotate(0deg);*/
+  animation: coche ease-in 0.5s;
+}
+
+.menu__card:hover .menu__animation {
+  right: 5rem;
+}
+
+.menu__card:hover {
+  padding-right: 4rem;
+}
+
+.menu__subtitle {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.menu__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+.card__flex {
+  display: flex;
+}
+
+.column {
+  min-width: 0;
+}
+
+.card__text {
+  overflow: hidden;
+}
+
+.card__text h4 {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .menu__bloc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+.header {
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  position: relative;
+}
+
+.header__logo {
+  font-family: Shrikhand, "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+.header__retour {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.loader__global {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  animation: loader 3s linear 1;
+  animation-fill-mode: forwards;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 60px);
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 16px solid #ffffff;
+  border-color: #b133aa #d37ace #b133aa #83297e;
+  animation: lds-dual-ring 3s linear 1;
+  animation-fill-mode: forwards;
+}
+
+footer {
+  background-color: #353535;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+footer .footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer__link i {
+  margin-right: 1rem;
+}
+footer .footer__list {
+  list-style: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-hands-helping:before {
+  content: "\f4c4";
+  font-size: 11px;
+}
+
+.footer__listElt {
+  margin: 0.5rem 0;
+}
+
+.footer__logo {
+  color: #fff;
+  font-family: Shrikhand, "cursive";
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+/* Animation d'apparition des plats */
+.delay__0 {
+  animation-delay: 0;
+}
+
+.delay__1 {
+  animation-delay: 0.2s;
+}
+
+.delay__2 {
+  animation-delay: 0.4s;
+}
+
+.delay__3 {
+  animation-delay: 0.6s;
+}
+
+.card__btn {
+  position: relative;
+}
+.card__btn .heart1 {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+}
+.card__btn .heart2 {
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.card__btn:hover .heart1 {
+  opacity: 0;
+}
+.card__btn:hover .heart2 {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

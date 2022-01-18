@@ -1,0 +1,170 @@
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
+}
+.localisation i {
+  padding-right: 0.5rem;
+}
+.reservation {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+.reservation__subtitle {
+  margin-bottom: 2rem;
+}
+.reservation__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+.reservation__btn:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+}
+.fonctionnement {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  padding: 2rem 1rem;
+}
+.fonctionnement__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: compteListe;
+}
+.list__step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+  transition: 1s;
+  &:hover {
+    background-color: #f5edff;
+    cursor: pointer;
+  }
+  &:before {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    left: -0.75rem;
+  }
+  &i {
+    margin-right: 1rem;
+    color: #7e7e7e;
+  }
+}
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+.card {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+}
+a.card {
+  display: block;
+}
+.card__img {
+  height: 8rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  display: block;
+}
+.card__new {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.2rem;
+}
+.card__back {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+.menu__img {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+.card__title {
+  margin: 0;
+}
+.tuto__icon {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .restaurants__cards {
+    display: grid;
+    justify-items: stretch;
+    align-items: end;
+    justify-content: space-evenly;
+    align-content: stretch;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card__img {
+    height: 12rem;
+  }
+  .fonctionnement__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    counter-reset: compteListe;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .list__step {
+    align-items: center;
+  }
+}

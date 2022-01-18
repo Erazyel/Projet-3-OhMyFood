@@ -1,0 +1,139 @@
+.menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+.menu__restaurant {
+  padding: 1rem 2rem 0 1rem;
+  margin-top: -5rem;
+  border-radius: 2rem 2rem 0 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #f6f6f6;
+  position: relative;
+}
+.menu__bloc {
+  display: flex;
+  flex-direction: column;
+}
+.menu__title {
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  font-family: Shrikhand, "cursive";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__subtitle::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 2rem;
+}
+.menu__card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu__card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  animation: appear ease-in 0.5s;
+  animation-fill-mode: both;
+}
+.menu__price {
+  font-weight: 700;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.menu__animation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+.menu__animation__icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  /*transform: rotate(180deg);
+  transition-duration: 0.5s;*/
+  color: #99e2d0;
+}
+.menu__card:hover .menu__animation__icon {
+  /*transform: rotate(0deg);*/
+  animation: coche ease-in 0.5s;
+}
+.menu__card:hover .menu__animation {
+  right: 5rem;
+}
+.menu__card:hover {
+  padding-right: 4rem;
+}
+.menu__subtitle {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.menu__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+.card__flex {
+  display: flex;
+}
+.column {
+  min-width: 0;
+}
+.card__text {
+  overflow: hidden;
+}
+.card__text h4 {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .menu__bloc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
