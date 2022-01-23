@@ -60,7 +60,7 @@
   }
   .heart2 {
     background: linear-gradient(#9356dc, #ff79da);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     left: 0;
