@@ -1,3 +1,57 @@
+.fa-2x {
+  font-size: 1.5em;
+}
+
+.commande__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+.commande__btn:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+}
+.page__btn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.reservation__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+.reservation__btn:hover {
+  background-color: #fff;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+}
+
 .card__btn {
   position: relative;
   .heart1 {

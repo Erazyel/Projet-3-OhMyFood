@@ -9,7 +9,7 @@
   margin: 0;
   text-align: center;
 }
-.header__retour {
+.header__return {
   position: absolute;
   left: 2rem;
   height: 2rem;
@@ -40,18 +40,17 @@
   height: 80px;
   position: fixed;
   top: 50%;
-  left: calc(50% - 60px);
-  // transform: translateX(-50%);
-}
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 16px solid #ffffff;
-  border-color: #b133aa #d37ace #b133aa #83297e;
-  animation: lds-dual-ring 3s linear 1;
-  animation-fill-mode: forwards;
+  left: calc(50% - 70px);
+  &:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 16px solid #ffffff;
+    border-color: #b133aa #d37ace #b133aa #83297e;
+    animation: lds-dual-ring 3s linear 1;
+    animation-fill-mode: forwards;
+  }
 }
