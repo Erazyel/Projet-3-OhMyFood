@@ -553,7 +553,7 @@ footer .footer__list {
 }
 .card__btn .heart2 {
   background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
   left: 0;
