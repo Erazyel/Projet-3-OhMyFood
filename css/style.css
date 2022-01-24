@@ -1,3 +1,4 @@
+/* Animation d'apparition des plats */
 @keyframes appear {
   0% {
     opacity: 0;
