@@ -64,10 +64,23 @@ a {
   background-color: #f3f3f3;
   font-size: 1.2rem;
   position: relative;
+  align-items: center;
 }
 
 .localisation i {
-  padding-right: 0.5rem;
+  padding-right: 13rem;
+}
+
+.search-box__input {
+  border: none;
+  font-weight: 700;
+  background: none;
+  text-align: center;
+  position: absolute;
+}
+
+::placeholder {
+  color: black;
 }
 
 .reservation {
@@ -125,6 +138,9 @@ a {
 .list__stepi {
   margin-right: 1rem;
   color: #7e7e7e;
+}
+.list__step i:hover {
+  color: #9356dc;
 }
 
 .restaurants {
@@ -192,6 +208,7 @@ a.card {
 
 .tuto__icon {
   margin-right: 0.5rem;
+  color: grey;
 }
 
 @media (min-width: 1024px) {
@@ -526,6 +543,7 @@ footer .footer__list {
   text-decoration: none;
   justify-content: center;
   padding: 3rem 0;
+  background-color: #f6f6f6;
 }
 
 .reservation__btn {
