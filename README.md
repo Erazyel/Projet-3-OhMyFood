@@ -1,4 +1,4 @@
-# LoraVery18112021
+# Projet 3 Oh My Food
 
 1. Objectifs
 ● Phase 1 : Développer un site proposant le menu de 4 grands restaurants parisiens.
